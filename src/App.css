@@ -12,11 +12,6 @@
     var(--bg);
 }
 
-/* Allow the kiosk page to scroll on phones if content is tall */
-@media (max-width: 600px) {
-  html, body, #root { overflow: auto; height: auto; min-height: 100%; }
-  .kiosk { min-height: 100dvh; }
-}
 
 /* -------- Brand header -------- */
 .brand {
