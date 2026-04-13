@@ -123,13 +123,12 @@
   background: var(--card);
   border: 1px solid #e6ece8;
   border-radius: 18px;
-  padding: clamp(10px, 1.5vw, 16px) clamp(8px, 1.2vw, 14px);
+  padding: clamp(12px, 1.6vw, 18px) clamp(8px, 1.2vw, 14px) clamp(10px, 1.2vw, 14px);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: clamp(4px, 0.8vh, 10px);
-  min-height: clamp(110px, 16vh, 170px);
+  gap: clamp(4px, 0.6vh, 8px);
   box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 8px 20px rgba(15,27,18,0.04);
 }
 .prize-card.raffle {
