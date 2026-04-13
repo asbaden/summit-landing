@@ -158,43 +158,66 @@
 }
 .prize-card.raffle .prize-qty { color: #8c6f17; }
 
-/* -------- CTA -------- */
-.cta-wrap {
+/* -------- QR footer -------- */
+.qr-wrap {
   margin-top: auto;
-  padding-top: clamp(8px, 1.5vh, 16px);
-  position: sticky;
-  bottom: 0;
+  padding-top: clamp(10px, 2vh, 20px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(12px, 2vw, 20px);
 }
-.cta {
-  width: 100%;
-  min-height: clamp(64px, 11vh, 112px);
-  border: none;
-  border-radius: 22px;
-  background: linear-gradient(180deg, #1f8b43 0%, var(--green) 55%, var(--green-dark) 100%);
-  color: white;
-  font-size: clamp(22px, 4.5vw, 40px);
-  font-weight: 800;
-  letter-spacing: 0.2px;
+.qr-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
+  text-align: center;
+  gap: clamp(8px, 1.2vh, 14px);
+  background: #ffffff;
+  border: 1px solid #e6ece8;
+  border-radius: 22px;
+  padding: clamp(14px, 2vw, 22px) clamp(12px, 1.6vw, 20px);
   box-shadow:
-    0 10px 24px rgba(26,122,58,0.35),
-    inset 0 -4px 0 rgba(0,0,0,0.12),
-    inset 0 1px 0 rgba(255,255,255,0.25);
-  cursor: pointer;
-  transition: transform 80ms ease, box-shadow 80ms ease;
-  padding: 0 16px;
+    0 1px 0 rgba(0,0,0,0.02),
+    0 14px 28px rgba(15,27,18,0.06);
 }
-.cta:active {
-  transform: translateY(2px);
-  box-shadow:
-    0 4px 10px rgba(26,122,58,0.3),
-    inset 0 -2px 0 rgba(0,0,0,0.12),
-    inset 0 1px 0 rgba(255,255,255,0.2);
+.qr-card--accent {
+  background: linear-gradient(180deg, #f3fbf6 0%, #ffffff 100%);
+  border-color: rgba(26,122,58,0.22);
 }
-.cta-arrow {
-  font-size: clamp(22px, 4vw, 38px);
-  transform: translateY(-1px);
+.qr-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.qr-kicker {
+  font-size: clamp(11px, 1.3vw, 13px);
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+}
+.qr-title {
+  font-size: clamp(18px, 2.8vw, 28px);
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.3px;
+}
+.qr-img {
+  width: clamp(140px, 22vw, 240px);
+  height: clamp(140px, 22vw, 240px);
+  object-fit: contain;
+  background: #fff;
+  border-radius: 14px;
+  padding: 6px;
+  border: 1px solid #eef2ef;
+}
+.qr-caption {
+  font-size: clamp(12px, 1.5vw, 15px);
+  color: var(--muted);
+  font-weight: 600;
+}
+
+@media (max-width: 520px) {
+  .qr-wrap { grid-template-columns: 1fr; }
 }

@@ -1,7 +1,5 @@
 import './App.css'
 
-const LARK_FORM_URL = 'https://hc6xtchryq8.sg.larksuite.com/wiki/PzH6wIxtRiizNDkCbeklpQMMgjg?table=tblcei1XNPdnuRH9&view=vewvZKZA2o'
-
 const spinPrizes = [
   { name: 'Free Sample', qty: 4, icon: '🎁' },
   { name: 'VIP Creator Access', qty: 2, icon: '⭐' },
@@ -17,23 +15,18 @@ const rafflePrizes = [
   { name: '$25 Gift Card', qty: 5, icon: '🎟️' },
 ]
 
-function PrizeCard({ icon, name, qty, variant }) {
+function PrizeCard({ icon, name, variant }) {
   return (
     <div className={`prize-card ${variant}`}>
       <div className="prize-icon" aria-hidden="true">{icon}</div>
       <div className="prize-body">
         <div className="prize-name">{name}</div>
-        <div className="prize-qty">{qty} {qty === 1 ? 'winner' : 'winners'}</div>
       </div>
     </div>
   )
 }
 
 export default function App() {
-  const openForm = () => {
-    window.open(LARK_FORM_URL, '_blank', 'noopener,noreferrer')
-  }
-
   return (
     <div className="kiosk">
       <header className="brand">
@@ -70,11 +63,24 @@ export default function App() {
         </div>
       </section>
 
-      <footer className="cta-wrap">
-        <button className="cta" onClick={openForm}>
-          Join the Giveaway
-          <span className="cta-arrow" aria-hidden="true">→</span>
-        </button>
+      <footer className="qr-wrap">
+        <div className="qr-card">
+          <div className="qr-label">
+            <span className="qr-kicker">Step 1</span>
+            <span className="qr-title">Enter the Giveaway</span>
+          </div>
+          <img src="/QRLark.png" alt="Scan to enter giveaway" className="qr-img" />
+          <div className="qr-caption">Scan to submit your entry</div>
+        </div>
+
+        <div className="qr-card qr-card--accent">
+          <div className="qr-label">
+            <span className="qr-kicker">Step 2</span>
+            <span className="qr-title">Join our Discord</span>
+          </div>
+          <img src="/QRDiscord.jpg" alt="Scan to join Discord" className="qr-img" />
+          <div className="qr-caption">Scan to join the community</div>
+        </div>
       </footer>
     </div>
   )
