@@ -37,12 +37,7 @@ export default function App() {
   return (
     <div className="kiosk">
       <header className="brand">
-        <div className="brand-mark" aria-hidden="true">
-          <span className="brand-leaf">🌿</span>
-        </div>
-        <div className="brand-text">
-          <div className="brand-name">MICRO INGREDIENTS</div>
-        </div>
+        <img src="/logo.png" alt="Micro Ingredients" className="brand-logo" />
       </header>
 
       <section className="hero">
