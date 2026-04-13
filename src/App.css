@@ -1,0 +1,216 @@
+.kiosk {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 32px 24px;
+  gap: 18px;
+  background:
+    radial-gradient(1200px 600px at 100% -200px, rgba(26,122,58,0.10), transparent 60%),
+    radial-gradient(900px 500px at -200px 100%, rgba(26,122,58,0.08), transparent 60%),
+    var(--bg);
+}
+
+/* -------- Brand header -------- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand-mark {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--green);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 16px rgba(26,122,58,0.28);
+}
+.brand-leaf {
+  font-size: 30px;
+  filter: grayscale(1) brightness(10);
+}
+.brand-text { line-height: 1.05; }
+.brand-name {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: var(--green-dark);
+}
+.brand-tag {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* -------- Hero -------- */
+.hero {
+  text-align: center;
+  padding: 6px 0 2px;
+}
+.headline {
+  margin: 0;
+  font-size: 68px;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  background: linear-gradient(180deg, var(--green) 0%, var(--green-dark) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+.sub {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+}
+.amp { color: var(--green); font-weight: 700; }
+
+/* -------- Sections -------- */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-head h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.2px;
+}
+.dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 4px rgba(26,122,58,0.15);
+}
+.dot.gold {
+  background: var(--gold);
+  box-shadow: 0 0 0 4px rgba(201,162,39,0.18);
+}
+.chip {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green-dark);
+  background: var(--green-light);
+  border: 1px solid rgba(26,122,58,0.18);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+/* -------- Grids -------- */
+.grid {
+  display: grid;
+  gap: 12px;
+}
+.grid-spin {
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid-raffle {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* -------- Prize card -------- */
+.prize-card {
+  background: var(--card);
+  border: 1px solid #e6ece8;
+  border-radius: 18px;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  min-height: 140px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 8px 20px rgba(15,27,18,0.04);
+  transition: transform 120ms ease;
+}
+.prize-card.raffle {
+  background: linear-gradient(180deg, #fffdf3 0%, #fff 100%);
+  border-color: #efe6c4;
+}
+.prize-icon {
+  font-size: 40px;
+  line-height: 1;
+}
+.prize-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.prize-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.1px;
+}
+.prize-qty {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.prize-card.raffle .prize-qty { color: #8c6f17; }
+
+/* -------- CTA -------- */
+.cta-wrap {
+  margin-top: auto;
+  padding-top: 8px;
+}
+.cta {
+  width: 100%;
+  min-height: 96px;
+  border: none;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #1f8b43 0%, var(--green) 55%, var(--green-dark) 100%);
+  color: white;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  box-shadow:
+    0 10px 24px rgba(26,122,58,0.35),
+    inset 0 -4px 0 rgba(0,0,0,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+  cursor: pointer;
+  transition: transform 80ms ease, box-shadow 80ms ease;
+}
+.cta:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 4px 10px rgba(26,122,58,0.3),
+    inset 0 -2px 0 rgba(0,0,0,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+}
+.cta-arrow {
+  font-size: 36px;
+  transform: translateY(-1px);
+}
+
+/* -------- iPad portrait tuning -------- */
+@media (min-width: 744px) and (orientation: portrait) {
+  .headline { font-size: 84px; }
+  .sub { font-size: 22px; }
+  .prize-card { min-height: 160px; }
+  .prize-icon { font-size: 46px; }
+  .prize-name { font-size: 17px; }
+  .cta { min-height: 110px; font-size: 38px; }
+}
+
+/* Smaller screens / landscape safety */
+@media (max-height: 760px) {
+  .headline { font-size: 54px; }
+  .prize-card { min-height: 120px; padding: 12px 10px; }
+  .prize-icon { font-size: 34px; }
+  .cta { min-height: 84px; font-size: 28px; }
+}
