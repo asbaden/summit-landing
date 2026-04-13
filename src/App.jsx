@@ -43,6 +43,7 @@ export default function App() {
         <div className="section-head">
           <span className="dot" />
           <h2>Spin Wheel Prizes</h2>
+          <span className="chip">1 spin per creator</span>
         </div>
         <div className="grid grid-spin">
           {spinPrizes.map((p) => (
