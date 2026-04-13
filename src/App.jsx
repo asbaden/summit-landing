@@ -12,7 +12,8 @@ const rafflePrizes = [
   { name: 'Apple Watch', qty: 2, icon: '⌚' },
   { name: 'iPad', qty: 1, icon: '📱' },
   { name: 'AirPods', qty: 1, icon: '🎧' },
-  { name: '$25 Gift Card', qty: 5, icon: '🎟️' },
+  { name: 'DJI Phone Holder', qty: 1, icon: '🤳' },
+  { name: '$25 Gift Card', qty: 5, icon: '💳' },
 ]
 
 function PrizeCard({ icon, name, variant }) {

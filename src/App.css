@@ -102,13 +102,13 @@
   grid-template-columns: repeat(5, 1fr);
 }
 .grid-raffle {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 /* Tablets / small landscape: step down */
 @media (max-width: 860px) {
   .grid-spin   { grid-template-columns: repeat(3, 1fr); }
-  .grid-raffle { grid-template-columns: repeat(2, 1fr); }
+  .grid-raffle { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* Phones */
