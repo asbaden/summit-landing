@@ -66,22 +66,22 @@ export default function App() {
       </section>
 
       <footer className="qr-wrap">
-        <div className="qr-card">
-          <div className="qr-label">
-            <span className="qr-kicker">Step 1</span>
-            <span className="qr-title">Enter the Giveaway</span>
-          </div>
-          <img src="/QRLark.png" alt="Scan to enter giveaway" className="qr-img" />
-          <div className="qr-caption">Scan to submit your entry</div>
-        </div>
-
         <div className="qr-card qr-card--accent">
           <div className="qr-label">
-            <span className="qr-kicker">Step 2</span>
+            <span className="qr-kicker">Step 1</span>
             <span className="qr-title">Join our Discord</span>
           </div>
           <img src="/QRDiscord.jpg" alt="Scan to join Discord" className="qr-img" />
           <div className="qr-caption">Scan to join the community</div>
+        </div>
+
+        <div className="qr-card">
+          <div className="qr-label">
+            <span className="qr-kicker">Step 2</span>
+            <span className="qr-title">Enter the Giveaway</span>
+          </div>
+          <img src="/QRLark.png" alt="Scan to enter giveaway" className="qr-img" />
+          <div className="qr-caption">Scan to submit your entry</div>
         </div>
       </footer>
     </div>
