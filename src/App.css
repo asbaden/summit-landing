@@ -158,6 +158,39 @@
 }
 .prize-card.raffle .prize-qty { color: #8c6f17; }
 
+/* -------- Rules callout -------- */
+.rules {
+  margin-top: clamp(8px, 1.4vh, 14px);
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.6vw, 16px);
+  background: linear-gradient(180deg, #fffaea 0%, #fff7dd 100%);
+  border: 1px solid #efe6c4;
+  border-radius: 16px;
+  padding: clamp(12px, 1.6vw, 18px) clamp(14px, 2vw, 20px);
+}
+.rules-icon {
+  font-size: clamp(26px, 3.5vw, 34px);
+  line-height: 1;
+  flex-shrink: 0;
+}
+.rules-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.rules-title {
+  font-size: clamp(14px, 1.9vw, 18px);
+  font-weight: 800;
+  color: #6a520d;
+  letter-spacing: -0.1px;
+}
+.rules-text {
+  font-size: clamp(12px, 1.5vw, 15px);
+  color: #8c6f17;
+  font-weight: 500;
+}
+
 /* -------- QR footer -------- */
 .qr-wrap {
   margin-top: auto;

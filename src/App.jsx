@@ -63,6 +63,13 @@ export default function App() {
             <PrizeCard key={p.name} {...p} variant="raffle" />
           ))}
         </div>
+        <div className="rules">
+          <div className="rules-icon" aria-hidden="true">⏰</div>
+          <div className="rules-body">
+            <div className="rules-title">Drawing at 4:00 PM PT — must be present to win</div>
+            <div className="rules-text">If your number is called and you're not here, we'll skip it and draw the next ticket.</div>
+          </div>
+        </div>
       </section>
 
       <footer className="qr-wrap">
